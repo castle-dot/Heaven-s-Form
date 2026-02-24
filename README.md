@@ -49,8 +49,8 @@ A full-stack web application built with Django REST Framework and React. Users c
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/heavens-form.git
-cd heavens-form
+git clone https://github.com/castle-dot/Heaven-s-Form.git
+cd Heaven-s-Form
 
 # Create and activate virtual environment
 python -m venv venv

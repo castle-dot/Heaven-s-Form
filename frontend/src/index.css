@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Crimson Text', serif;
+  background-color: #0a0a1a;
+}
+
+.gold-text {
+  background: linear-gradient(135deg, #f0d060, #c0932a, #f0d060);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gold-glow {
+  text-shadow: 0 0 20px rgba(240, 208, 96, 0.8), 0 0 40px rgba(240, 208, 96, 0.4);
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.3); }
+}
+
+@keyframes drift {
+  0% { transform: translateX(-200px); }
+  100% { transform: translateX(calc(100vw + 200px)); }
+}
+
+.cloud {
+  position: fixed;
+  font-size: 4rem;
+  opacity: 0.2;
+  animation: drift linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cloud-1 { top: 10%; animation-duration: 25s; animation-delay: 0s; }
+.cloud-2 { top: 30%; animation-duration: 35s; animation-delay: 8s; font-size: 6rem; }
+.cloud-3 { top: 60%; animation-duration: 20s; animation-delay: 4s; font-size: 3rem; }
+.cloud-4 { top: 80%; animation-duration: 30s; animation-delay: 12s; }

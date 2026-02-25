@@ -89,41 +89,32 @@ function Home() {
                             transition={{ duration: 1.2 }}
                             className="text-center max-w-2xl"
                         >
-                           <motion.div
-                                animate={{ 
-                                    y: [0, -20, 0],
-                                    rotate: [-2, 2, -2],
-                                    scale: [1, 1.05, 1]
-                                }}
-                                transition={{ 
-                                        duration: 4, 
-                                        repeat: Infinity, 
-                                        ease: "linear", // We use linear here because the keyframes create the curve
-                                        times: [0, 0.5, 1] 
-                            }}
-                            className="text-8xl mb-6"
+                            <motion.div
+                                animate={{ y: [0, -15, 0] }}
+                                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+                                className="text-6xl md:text-8xl mb-6"
                             >
-                                🪽
+                                ✨
                             </motion.div>
-                            <h1 className="text-6xl mb-4 gold-text gold-glow" style={{fontFamily: 'Cinzel, serif', lineHeight: '1.2'}}>
+                            <h1 className="text-4xl md:text-6xl mb-4 gold-text gold-glow" style={{fontFamily: 'Cinzel, serif', lineHeight: '1.2'}}>
                                 Heaven's Form
                             </h1>
-                            <p className="text-gray-300 text-xl mb-10" style={{fontFamily: 'Crimson Text, serif', lineHeight: '1.8'}}>
+                            <p className="text-gray-300 text-base md:text-xl mb-10" style={{fontFamily: 'Crimson Text, serif', lineHeight: '1.8'}}>
                                 144,000 spots. One eternity. Register your soul before the gates close forever.
                             </p>
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 1, delay: 0.6 }}
-                                className="flex gap-4 justify-center"
+                                className="flex flex-col md:flex-row gap-4 justify-center"
                             >
                                 <a href="/register"
-                                   className="px-8 py-3 rounded-lg text-black font-semibold tracking-wide"
+                                   className="px-8 py-3 rounded-lg text-black font-semibold tracking-wide text-center"
                                    style={{background: 'linear-gradient(135deg, #f0d060, #c0932a)', fontFamily: 'Cinzel, serif'}}>
                                     Register Your Soul
                                 </a>
                                 <a href="/login"
-                                   className="px-8 py-3 rounded-lg text-yellow-400 font-semibold tracking-wide border border-yellow-400/30"
+                                   className="px-8 py-3 rounded-lg text-yellow-400 font-semibold tracking-wide border border-yellow-400/30 text-center"
                                    style={{fontFamily: 'Cinzel, serif'}}>
                                     Sign In
                                 </a>
@@ -135,7 +126,7 @@ function Home() {
                         initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, delay: 0.8 }}
-                        className="w-full px-8 pb-12 grid grid-cols-2 gap-6 max-w-4xl mx-auto"
+                        className="w-full px-8 pb-12 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto"
                     >
                         <HeavenStats />
                         <JesusQuote />
@@ -159,32 +150,32 @@ function Home() {
                             <motion.div
                                 animate={{ y: [0, -15, 0] }}
                                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                                className="text-8xl mb-6"
+                                className="text-6xl md:text-8xl mb-6"
                             >
                                 👼
                             </motion.div>
-                            <h1 className="text-5xl mb-3 gold-text" style={{fontFamily: 'Cinzel, serif'}}>
+                            <h1 className="text-3xl md:text-5xl mb-3 gold-text" style={{fontFamily: 'Cinzel, serif'}}>
                                 Welcome, {mySoul.name}
                             </h1>
-                            <p className="text-gray-300 text-lg mb-2" style={{fontFamily: 'Crimson Text, serif'}}>
+                            <p className="text-gray-300 text-base md:text-lg mb-2" style={{fontFamily: 'Crimson Text, serif'}}>
                                 Your soul is secured in heaven
                             </p>
                             <p className="text-yellow-400/50 mb-10" style={{fontFamily: 'Crimson Text, serif'}}>
                                 ✝ Spot #{mySoul.id} in eternity ✝
                             </p>
                             <motion.div
-                                className="flex gap-4 justify-center"
+                                className="flex flex-col md:flex-row gap-4 justify-center"
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.3 }}
                             >
                                 <a href="/confession"
-                                   className="px-8 py-3 rounded-lg text-black font-semibold tracking-wide"
+                                   className="px-8 py-3 rounded-lg text-black font-semibold tracking-wide text-center"
                                    style={{background: 'linear-gradient(135deg, #f0d060, #c0932a)', fontFamily: 'Cinzel, serif'}}>
                                     📜 Confess Your Sins
                                 </a>
                                 <a href="/leaderboard"
-                                   className="px-8 py-3 rounded-lg text-yellow-400 font-semibold tracking-wide border border-yellow-400/30"
+                                   className="px-8 py-3 rounded-lg text-yellow-400 font-semibold tracking-wide border border-yellow-400/30 text-center"
                                    style={{fontFamily: 'Cinzel, serif'}}>
                                     📖 Book of Heaven
                                 </a>
@@ -196,7 +187,7 @@ function Home() {
                         initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, delay: 0.8 }}
-                        className="w-full px-8 pb-12 grid grid-cols-2 gap-6 max-w-4xl mx-auto"
+                        className="w-full px-8 pb-12 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto"
                     >
                         <HeavenStats />
                         <JesusQuote />
@@ -266,7 +257,7 @@ function Home() {
                     </motion.form>
                 </motion.div>
 
-                <div className="w-full grid grid-cols-2 gap-6 max-w-4xl pb-12">
+                <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl pb-12">
                     <HeavenStats />
                     <JesusQuote />
                 </div>

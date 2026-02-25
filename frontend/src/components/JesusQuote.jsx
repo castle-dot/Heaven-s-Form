@@ -26,12 +26,11 @@ function JesusQuote() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            className="w-full max-w-2xl mx-auto px-8 mt-8"
+            className="w-full max-w-2xl mx-auto mt-8"
         >
-            <div className="p-6 rounded-lg bg-white/5 border border-yellow-400/20 text-center relative overflow-hidden">
+            <div className="p-4 md:p-6 rounded-lg bg-white/5 border border-yellow-400/20 text-center relative overflow-hidden">
                 
-                {/* Decorative cross */}
-                <div className="text-2xl mb-3 opacity-40">✝</div>
+                <div className="text-xl md:text-2xl mb-3 opacity-40">✝</div>
 
                 <AnimatePresence mode="wait">
                     <motion.div
@@ -41,18 +40,17 @@ function JesusQuote() {
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <p className="text-gray-200 text-xl mb-3"
+                        <p className="text-gray-200 text-base md:text-xl mb-3"
                            style={{fontFamily: 'Crimson Text, serif', fontStyle: 'italic', lineHeight: '1.8'}}>
                             "{quotes[index].text}"
                         </p>
-                        <p className="text-yellow-400/70 text-sm"
+                        <p className="text-yellow-400/70 text-xs md:text-sm"
                            style={{fontFamily: 'Cinzel, serif'}}>
                             — {quotes[index].reference}
                         </p>
                     </motion.div>
                 </AnimatePresence>
 
-                {/* Dots indicator */}
                 <div className="flex justify-center gap-2 mt-4">
                     {quotes.map((_, i) => (
                         <button

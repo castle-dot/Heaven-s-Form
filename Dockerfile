@@ -9,4 +9,4 @@ COPY . .
 
 EXPOSE 8000
 
-CMD ["sh", "-c", "python manage.py migrate && python manage.py collectstatic --noinput && gunicorn heavens_form.wsgi --bind 0.0.0.0:8000 --log-file -"]
+CMD ["sh", "-c", "python manage.py migrate && gunicorn heavens_form.wsgi --bind 0.0.0.0:8000 --log-file -"]

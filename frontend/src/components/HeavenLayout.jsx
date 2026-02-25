@@ -102,10 +102,33 @@ function HeavenLayout({ children }) {
             <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none" style={{zIndex: 1}} />
 
             {/* Clouds */}
-            <div className="cloud cloud-1">☁️</div>
-            <div className="cloud cloud-2">☁️</div>
-            <div className="cloud cloud-3">☁️</div>
-            <div className="cloud cloud-4">☁️</div>
+<div className="cloud cloud-1">
+    <div className="cloud-body" style={{width: '120px', height: '40px'}}>
+        <div style={{position: 'absolute', top: '-20px', left: '20px', width: '50px', height: '50px', background: 'rgba(255,240,180,0.5)', borderRadius: '50%'}}></div>
+        <div style={{position: 'absolute', top: '-30px', left: '50px', width: '70px', height: '70px', background: 'rgba(255,240,180,0.5)', borderRadius: '50%'}}></div>
+        <div style={{position: 'absolute', top: '-15px', left: '90px', width: '40px', height: '40px', background: 'rgba(255,240,180,0.5)', borderRadius: '50%'}}></div>
+    </div>
+</div>
+<div className="cloud cloud-2">
+    <div className="cloud-body" style={{width: '180px', height: '50px'}}>
+        <div style={{position: 'absolute', top: '-25px', left: '30px', width: '60px', height: '60px', background: 'rgba(255,240,180,0.5)', borderRadius: '50%'}}></div>
+        <div style={{position: 'absolute', top: '-40px', left: '70px', width: '90px', height: '90px', background: 'rgba(255,240,180,0.5)', borderRadius: '50%'}}></div>
+        <div style={{position: 'absolute', top: '-20px', left: '140px', width: '50px', height: '50px', background: 'rgba(255,240,180,0.5)', borderRadius: '50%'}}></div>
+    </div>
+</div>
+<div className="cloud cloud-3">
+    <div className="cloud-body" style={{width: '100px', height: '35px'}}>
+        <div style={{position: 'absolute', top: '-18px', left: '15px', width: '45px', height: '45px', background: 'rgba(255,240,180,0.5)', borderRadius: '50%'}}></div>
+        <div style={{position: 'absolute', top: '-25px', left: '40px', width: '55px', height: '55px', background: 'rgba(255,240,180,0.5)', borderRadius: '50%'}}></div>
+    </div>
+</div>
+<div className="cloud cloud-4">
+    <div className="cloud-body" style={{width: '150px', height: '45px'}}>
+        <div style={{position: 'absolute', top: '-20px', left: '25px', width: '55px', height: '55px', background: 'rgba(255,240,180,0.5)', borderRadius: '50%'}}></div>
+        <div style={{position: 'absolute', top: '-35px', left: '60px', width: '75px', height: '75px', background: 'rgba(255,240,180,0.5)', borderRadius: '50%'}}></div>
+        <div style={{position: 'absolute', top: '-18px', left: '115px', width: '45px', height: '45px', background: 'rgba(255,240,180,0.5)', borderRadius: '50%'}}></div>
+    </div>
+</div>
 
             {/* Page content */}
             <motion.div

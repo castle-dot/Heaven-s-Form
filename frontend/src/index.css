@@ -27,20 +27,50 @@ body {
 }
 
 @keyframes drift {
-  0% { transform: translateX(-200px); }
-  100% { transform: translateX(calc(100vw + 200px)); }
+  0% { transform: translateX(-300px); }
+  100% { transform: translateX(calc(100vw + 300px)); }
 }
 
 .cloud {
   position: fixed;
-  font-size: 4rem;
-  opacity: 0.2;
-  animation: drift linear infinite;
   pointer-events: none;
+  opacity: 0.12;
+  animation: drift linear infinite;
   z-index: 1;
+  filter: blur(2px);
 }
 
-.cloud-1 { top: 10%; animation-duration: 25s; animation-delay: 0s; }
-.cloud-2 { top: 30%; animation-duration: 35s; animation-delay: 8s; font-size: 6rem; }
-.cloud-3 { top: 60%; animation-duration: 20s; animation-delay: 4s; font-size: 3rem; }
-.cloud-4 { top: 80%; animation-duration: 30s; animation-delay: 12s; }
+.cloud::before,
+.cloud::after {
+  content: '';
+  position: absolute;
+  background: rgba(255, 240, 180, 0.6);
+  border-radius: 50%;
+}
+
+.cloud-body {
+  background: rgba(255, 240, 180, 0.5);
+  border-radius: 50px;
+  position: relative;
+}
+
+.cloud-1 { 
+  top: 5%; 
+  animation-duration: 30s; 
+  animation-delay: 0s; 
+}
+.cloud-2 { 
+  top: 12%; 
+  animation-duration: 45s; 
+  animation-delay: 10s; 
+}
+.cloud-3 { 
+  top: 3%; 
+  animation-duration: 25s; 
+  animation-delay: 5s; 
+}
+.cloud-4 { 
+  top: 18%; 
+  animation-duration: 38s; 
+  animation-delay: 15s; 
+}

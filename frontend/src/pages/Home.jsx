@@ -89,12 +89,21 @@ function Home() {
                             transition={{ duration: 1.2 }}
                             className="text-center max-w-2xl"
                         >
-                            <motion.div
-                                animate={{ y: [0, -15, 0] }}
-                                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                                className="text-8xl mb-6"
+                           <motion.div
+                                animate={{ 
+                                    y: [0, -20, 0],
+                                    rotate: [-2, 2, -2],
+                                    scale: [1, 1.05, 1]
+                                }}
+                                transition={{ 
+                                        duration: 4, 
+                                        repeat: Infinity, 
+                                        ease: "linear", // We use linear here because the keyframes create the curve
+                                        times: [0, 0.5, 1] 
+                            }}
+                            className="text-8xl mb-6"
                             >
-                                ✨
+                                🪽
                             </motion.div>
                             <h1 className="text-6xl mb-4 gold-text gold-glow" style={{fontFamily: 'Cinzel, serif', lineHeight: '1.2'}}>
                                 Heaven's Form

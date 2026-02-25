@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import Navbar from './Navbar'
-import audio1 from '../assets/audio1.mp3'
+import audio1 from '../assets/audio1.MP3'
 
 function HeavenLayout({ children }) {
     const canvasRef = useRef(null)

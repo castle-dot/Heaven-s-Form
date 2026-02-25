@@ -1,10 +1,6 @@
 {
   "$schema": "https://railway.app/railway.schema.json",
   "build": {
-    "builder": "NIXPACKS"
-  },
-  "deploy": {
-    "startCommand": "python3 -m gunicorn heavens_form.wsgi --log-file -",
-    "restartPolicyType": "ON_FAILURE"
+    "builder": "DOCKERFILE"
   }
 }

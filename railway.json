@@ -4,7 +4,7 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "gunicorn heavens_form.wsgi --log-file -",
+    "startCommand": "python -m gunicorn heavens_form.wsgi --log-file -",
     "restartPolicyType": "ON_FAILURE"
   }
 }

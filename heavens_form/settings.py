@@ -55,6 +55,7 @@ REST_FRAMEWORK = {
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
+    'https://heavens-form.vercel.app',
     
 ]
 
